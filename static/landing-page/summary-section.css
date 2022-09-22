@@ -1,0 +1,52 @@
+#summary-section{
+    background-color: rgba(108, 111, 110, 0.238);
+    padding:10px;
+
+}
+#summary-section h1{
+    margin-top: 30px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+}
+#summary-section .comment{
+    margin: 100px;
+    margin-left:600px;
+    margin-right:600px;
+    height: 600px;
+    background-color: white;
+    background-image:url('../image-page/picture.png');
+    background-repeat: no-repeat;
+}
+#summary-section .box{
+    float: right;
+    padding:10px;
+    color:rgb(25, 118, 87);
+    height: 70px;
+}
+
+#summary-section h5{
+    font-weight: 600;
+}
+
+#summary-section h6{
+    text-align: right;
+}
+
+/*tablets*/
+@media only screen and (max-width: 960px)
+{
+    #summary-section h1
+    {
+        font-size:0.8rem;
+        font-weight: 600;
+    }
+    #summary-section h2
+    {
+        font-size:0.8rem;
+        font-weight: 800;
+    }
+}
+/*phones*/
+@media only screen and (max-width: 767px){
+}
