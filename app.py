@@ -1,9 +1,14 @@
 from flask import Flask,render_template,request,redirect,url_for
+import datetime
 app = Flask(__name__)
-
+entries=[]
 @app.route('/', methods=['GET', 'POST'])
 def main():
     if request.method == 'POST':
+        entry_content = request.form.get("content")
+        formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
+        entries.append((entry_content, formatted_date))
+
         if request.form.get('action1') == 'Noise/Vibration':
             return render_template('tl/noise.html') # do something
         elif  request.form.get('action1') == 'Clothing Issue':
@@ -56,12 +61,13 @@ def main():
 
         elif  request.form.get('action3') == 'Homepage':
             return render_template('index.html') # do something       
-        
+    
         else:
             pass # unknown
     elif request.method == 'GET':
         pass
-    return render_template("index.html")
+    return render_template("index.html", entries=entries)
+
 
  
 

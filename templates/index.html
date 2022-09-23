@@ -185,17 +185,60 @@
           </form>
       </div>
     </section>
+
     <section id="summary-section">
-        <h1>How was your field issue and experience? </h1>
-        <h2>Please share your service experience. It is the direct voice of the customer of the production company.</h2>
-        <div class="comment"></div>
-        <div class="box">
-            <h5>Author : LGEUS TN R&D Team Eunbi Yoon</h5>
-            <h6>Version : V3_092322</h6>
+        <div class="navbar">
+            <div class="navbar__brand">
+              <img class="navbar__logo" src="../static/image-page/logo.svg" alt="The Microblog logo" />
+              <h6>Customer Review</h6>
+            </div>
         </div>
+        <div class="main">
+            <section>
+              <h1>Share us your opinion</h1>
+              <form class="form" method="POST">
+                <p class="form__input">
+                  <label for="entry" class="form__label">Entry contents:</label>
+                  <textarea name="content" id="entry" class="form__textarea"></textarea>
+                </p>
+                <button type="submit" class="form__submit">Add entry</button>
+              </form>
+            </section>
+            <section>
+              <h1>Recent posts</h1>
+              {% for entry in entries %}
+                <article class="entry">
+                  <div>
+                    <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
+                    <time class="entry__date" datetime="{{ entry[1] }}">• {{ entry[1] }}</time>
+                  </div>
+                  <p class="entry__content">
+                    {{ entry[0] }}
+                  </p>
+                </article>
+              {% endfor %}
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="footer__content">
+              <section class="left">
+                <a class="footer__item">Made by Eunbi</a>
+                <a class="footer__item">LGEUS TN R&D Team Eunbi Yoon</a>
+              </section>
+              <section class="right">
+                <div class="footer__column">
+                  <a class="footer__item">Recent</a>
+                  <a class="footer__item">Calendar</a>
+                </div>
+                <div class="footer__column">
+                  <a class="footer__item" href="#">About</a>
+                  <a class="footer__item">V3_092322</a>
+                </div>
+              </section>
+            </div>
+          </footer>
         
       
-    </section>
-  
+    </section>  
 </body>
 </html>
