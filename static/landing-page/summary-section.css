@@ -4,10 +4,15 @@
 
 }
 #summary-section h1{
-    margin-top: 30px;
+    margin-top: 120px;
     font-weight: 600;
     text-align: center;
     font-size: 2rem;
+}
+#summary-section h2{
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
 }
 #summary-section .comment{
     margin: 100px;
