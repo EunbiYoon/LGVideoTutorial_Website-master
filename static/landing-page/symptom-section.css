@@ -180,6 +180,9 @@ v
 }
 /*phones*/
 @media only screen and (max-width: 767px){
+    #symptom-section .symptom-container .box .btn{
+        font-size: 0.7rem;
+    }
     #symptom-section .container{
         margin:0 auto;
     }

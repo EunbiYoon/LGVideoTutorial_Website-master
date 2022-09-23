@@ -195,6 +195,9 @@ v
 }
 /*phones*/
 @media only screen and (max-width: 767px){
+    #symptom2-section .symptom-container .box .btn{
+        font-size: 0.7rem;
+    }
     #symptom2-section .container{
         margin:0 auto;
     }
